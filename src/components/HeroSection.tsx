@@ -5,7 +5,14 @@ const HeroSection = () => {
   return (
     <>
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-hero pt-20">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 flex flex-col items-center">
+          <div className="flex justify-center">
+            <img
+              src="https://akil.lovable.app/assets/developer-hero-Bdat_DFy.png"
+              alt="Profile"
+              className="w-56 h-56 sm:w-64 sm:h-64 rounded-full object-cover shadow-lg"
+            />
+          </div>
           <div className="max-w-3xl mx-auto text-center">
             {/* Text Content */}
             <div className="stagger-children">
@@ -54,13 +61,7 @@ const HeroSection = () => {
             </div>
 
           </div>
-          <div className="flex justify-center">
-            <img
-              src="https://akil.lovable.app/assets/developer-hero-Bdat_DFy.png"
-              alt="Profile"
-              className="w-40 h-40 rounded-full object-cover shadow-lg"
-            />
-          </div>
+
 
           {/* Scroll Indicator */}
           <div className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce hidden md:block">
