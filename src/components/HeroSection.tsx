@@ -54,7 +54,9 @@ const HeroSection = () => {
           </div>
 
         </div>
-
+        <div>
+          <img src="https://akil.lovable.app/assets/developer-hero-Bdat_DFy.png" alt="" />
+        </div>
         {/* Scroll Indicator */}
         <div className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce hidden md:block">
           <a href="#about" className="text-muted-foreground hover:text-primary transition-colors">
