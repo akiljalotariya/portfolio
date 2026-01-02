@@ -7,7 +7,7 @@ const HeroSection = () => {
     <section className="relative min-h-screen flex items-center bg-gradient-hero pt-20">
   <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
     
-    <div className="grid grid-cols-1 md:grid-cols-2 items-center justify-center gap-10">
+    <div className="grid grid-cols-1 md:grid-cols-2 justify-center gap-10">
 
       {/* LEFT — TEXT CONTENT */}
       <div className="max-w-3xl">
