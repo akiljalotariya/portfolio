@@ -55,11 +55,11 @@ const HeroSection = () => {
       </div>
 
       {/* RIGHT — ROUND IMAGE */}
-      <div className="flex justify-center md:justify-end w-100 h-64">
+      <div className="flex justify-center md:justify-end w-100 h-64 sm:w-90 sm:h-90">
         <img
           src="https://akil.lovable.app/assets/developer-hero-Bdat_DFy.png"
           alt="Profile"
-          className="w-100 h-64 sm:w-65 sm:h-80 rounded-full object-cover shadow-2xl border-4 border-white/20"
+          className="w-100 h-64 sm:w-80 sm:h-80 rounded-full object-cover shadow-2xl border-4 border-white/20"
         />
       </div>
 
