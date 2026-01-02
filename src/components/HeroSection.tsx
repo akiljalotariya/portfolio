@@ -3,7 +3,8 @@ import { Button } from "./ui/button";
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-hero pt-20">
+    <>
+        <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-hero pt-20">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="max-w-3xl mx-auto text-center">
           {/* Text Content */}
@@ -11,7 +12,7 @@ const HeroSection = () => {
             {/* Greeting */}
             <p className="text-muted-foreground text-lg mb-2"> Hello!</p>
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 tracking-tight text-foreground">
-              Hi, I'm <span className="text-primary">Jalotariya Akil</span>
+              Hi, I'm <span className="text-primary"> Akil Jalotariya</span>
             </h1>
 
             {/* Code Block */}
@@ -62,6 +63,7 @@ const HeroSection = () => {
         </div>
       </div>
     </section>
+    </>
   );
 };
 
