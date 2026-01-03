@@ -49,7 +49,7 @@ const ContactSection = () => {
             </a>
 
             <a className="group bg-white rounded-2xl shadow-md p-10 flex flex-col items-center gap-4 hover:shadow-xl transition"
-               href="mailto:your@email.com">
+               href="akiljalotariya34@email.com">
               <Mail className="w-14 h-14 text-gray-500 group-hover:scale-110 transition" />
               <span className="font-medium">Email</span>
             </a>

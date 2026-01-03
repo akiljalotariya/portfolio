@@ -8,7 +8,8 @@ const frontendSkills = [
 const backendSkills = [
   { name: "Node.js", level: 75 },
   { name: "Express.js", level: 80 },
-  { name: "MongoDB", level: 65 },
+  { name: "MY SQL", level: 90 },
+  { name: "MongoDB", level: 30 },
   // { name: "REST APIs", level: 75 },
 ];
 
