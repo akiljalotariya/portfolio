@@ -32,13 +32,12 @@ const HeroSection = () => {
               {/* Auto typing name */}
               <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 tracking-tight text-foreground">
                 Hi, I'm{" "}
-                <span className="text-primary">
+                <span className="text-primary inline-block min-w-[220px]">
                   {text}
-                  <span className="border-r-2 border-primary ml-1 animate-pulse">
-                    &nbsp;
-                  </span>
+                  <span className="border-r-2 border-primary ml-1 animate-pulse">&nbsp;</span>
                 </span>
               </h1>
+
 
               {/* Code Card */}
               <div className="mb-8 rounded-xl overflow-hidden shadow-card max-w-lg border border-border">
