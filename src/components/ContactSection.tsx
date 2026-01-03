@@ -14,6 +14,7 @@ const ContactSection = () => {
     message: "",
   });
 
+  // clear inputs after submit
   useEffect(() => {
     if (state.succeeded) {
       setFormData({ name: "", email: "", message: "" });
@@ -29,41 +30,7 @@ const ContactSection = () => {
 
   return (
     <>
-
-    {/* Social cards section */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-6xl mx-auto px-6">
-          <h2 className="text-3xl font-bold text-center mb-12">Connect With Me</h2>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            <a className="group bg-white rounded-2xl shadow-md p-10 flex flex-col items-center gap-4 hover:shadow-xl transition"
-               href="https://github.com/akiljalotariya/portfolio" target="_blank">
-              <Github className="w-14 h-14 text-gray-500 group-hover:scale-110 transition" />
-              <span className="font-medium">Github</span>
-            </a>
-
-            <a className="group bg-white rounded-2xl shadow-md p-10 flex flex-col items-center gap-4 hover:shadow-xl transition"
-               href="https://www.linkedin.com/in/akil-jalotariya-157a042b3/" target="_blank">
-              <Linkedin className="w-14 h-14 text-gray-500 group-hover:scale-110 transition" />
-              <span className="font-medium">LinkedIn</span>
-            </a>
-
-            <a className="group bg-white rounded-2xl shadow-md p-10 flex flex-col items-center gap-4 hover:shadow-xl transition"
-               href="akiljalotariya34@email.com">
-              <Mail className="w-14 h-14 text-gray-500 group-hover:scale-110 transition" />
-              <span className="font-medium">Email</span>
-            </a>
-
-            <a className="group bg-white rounded-2xl shadow-md p-10 flex flex-col items-center gap-4 hover:shadow-xl transition"
-               href="https://wa.me/919054593051" target="_blank">
-              <Phone className="w-14 h-14 text-gray-500 group-hover:scale-110 transition" />
-              <span className="font-medium">WhatsApp</span>
-            </a>
-          </div>
-        </div>
-      </section>
-
-      {/* Contact form section */}
+      {/* CONTACT FORM SECTION */}
       <section id="contact" className="section-container bg-secondary/30">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
@@ -71,30 +38,40 @@ const ContactSection = () => {
               Let's Work <span className="text-primary">Together</span>
             </h2>
             <p className="section-subtitle max-w-2xl mx-auto">
-              Have a project in mind? Let's discuss how we can collaborate to bring your vision to life.
+              Have a project in mind? Let's discuss how we can collaborate to
+              bring your vision to life.
             </p>
           </div>
 
           <div className="grid lg:grid-cols-2 gap-12">
-            {/* Contact info */}
+            {/* CONTACT INFO */}
             <div className="space-y-8">
               <div>
                 <h3 className="text-2xl font-semibold mb-4">Get In Touch</h3>
                 <p className="text-muted-foreground">
-                  I'm always open to discussing new projects, creative ideas, 
-                  or opportunities. Feel free to reach out!
+                  I'm always open to discussing new projects, creative ideas, or
+                  opportunities. Feel free to reach out!
                 </p>
               </div>
 
               <div className="space-y-4">
+                {/* EMAIL */}
                 <div className="flex items-center gap-4 p-4 rounded-xl bg-background border">
                   <Mail className="w-5 h-5 text-primary" />
                   <div>
                     <p className="text-sm text-muted-foreground">Email</p>
-                    <p className="font-medium"><link rel="stylesheet" href="akiljalotariya34@email.com" /></p>
+                    <p className="font-medium">
+                      <a
+                        href="mailto:akiljalotariya34@email.com"
+                        className="text-primary hover:underline"
+                      >
+                        akiljalotariya34@email.com
+                      </a>
+                    </p>
                   </div>
                 </div>
 
+                {/* LOCATION */}
                 <div className="flex items-center gap-4 p-4 rounded-xl bg-background border">
                   <MapPin className="w-5 h-5 text-primary" />
                   <div>
@@ -103,18 +80,29 @@ const ContactSection = () => {
                   </div>
                 </div>
 
+                {/* PHONE */}
                 <div className="flex items-center gap-4 p-4 rounded-xl bg-background border">
                   <Phone className="w-5 h-5 text-primary" />
                   <div>
                     <p className="text-sm text-muted-foreground">Contact</p>
-                    <p className="font-medium"><link rel="stylesheet" href="+91 9054593051" /></p>
+                    <p className="font-medium">
+                      <a
+                        href="tel:+919054593051"
+                        className="text-primary hover:underline"
+                      >
+                        +91 90545 93051
+                      </a>
+                    </p>
                   </div>
                 </div>
               </div>
             </div>
 
-            {/* Form */}
-            <form onSubmit={handleSubmit} className="space-y-6 p-8 rounded-2xl bg-background border shadow-card">
+            {/* FORM */}
+            <form
+              onSubmit={handleSubmit}
+              className="space-y-6 p-8 rounded-2xl bg-background border shadow-card"
+            >
               <Input
                 name="name"
                 placeholder="Your name"
@@ -149,7 +137,54 @@ const ContactSection = () => {
         </div>
       </section>
 
-      
+      {/* SOCIAL LINKS SECTION */}
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-6xl mx-auto px-6">
+          <h2 className="text-3xl font-bold text-center mb-12">
+            Connect With Me
+          </h2>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            <a
+              href="https://github.com/your-username"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group bg-white rounded-2xl shadow-md p-10 flex flex-col items-center gap-4 hover:shadow-xl transition"
+            >
+              <Github className="w-14 h-14 text-gray-500 group-hover:scale-110 transition" />
+              <span className="font-medium">Github</span>
+            </a>
+
+            <a
+              href="https://linkedin.com/in/your-profile"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group bg-white rounded-2xl shadow-md p-10 flex flex-col items-center gap-4 hover:shadow-xl transition"
+            >
+              <Linkedin className="w-14 h-14 text-gray-500 group-hover:scale-110 transition" />
+              <span className="font-medium">LinkedIn</span>
+            </a>
+
+            <a
+              href="mailto:akiljalotariya34@email.com"
+              className="group bg-white rounded-2xl shadow-md p-10 flex flex-col items-center gap-4 hover:shadow-xl transition"
+            >
+              <Mail className="w-14 h-14 text-gray-500 group-hover:scale-110 transition" />
+              <span className="font-medium">Email</span>
+            </a>
+
+            <a
+              href="https://wa.me/919054593051"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group bg-white rounded-2xl shadow-md p-10 flex flex-col items-center gap-4 hover:shadow-xl transition"
+            >
+              <Phone className="w-14 h-14 text-gray-500 group-hover:scale-110 transition" />
+              <span className="font-medium">WhatsApp</span>
+            </a>
+          </div>
+        </div>
+      </section>
     </>
   );
 };
