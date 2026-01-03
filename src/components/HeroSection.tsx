@@ -57,7 +57,7 @@ const HeroSection = () => {
       {/* RIGHT — ROUND IMAGE */}
       <div className="flex justify-center md:justify-end w-100 h-100 sm:w-90 sm:h-90">
         <img
-          src="https://akil.lovable.app/assets/developer-hero-Bdat_DFy.png"
+          src="https://images.unsplash.com/photo-1534665482403-a909d0d97c67?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bWFuJTIwY29kaW5nfGVufDB8fDB8fHww"
           alt="Profile"
           className="w-100 h-64 sm:w-80 sm:h-80 rounded-full object-cover shadow-2xl border-4 border-white/20"
         />
