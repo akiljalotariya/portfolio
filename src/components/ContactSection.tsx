@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Send, Mail, MapPin, Phone } from "lucide-react";
+import { Send, Mail, MapPin, Phone, Github, Linkedin } from "lucide-react";
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
 import { Textarea } from "./ui/textarea";
@@ -14,7 +14,6 @@ const ContactSection = () => {
     message: "",
   });
 
-  // clear form when successfully submitted
   useEffect(() => {
     if (state.succeeded) {
       setFormData({ name: "", email: "", message: "" });
@@ -29,136 +28,126 @@ const ContactSection = () => {
   };
 
   return (
-    <section id="contact" className="section-container bg-secondary/30">
-      <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="section-title">
-            Let's Work <span className="text-primary">Together</span>
-          </h2>
-          <p className="section-subtitle max-w-2xl mx-auto">
-            Have a project in mind? Let's discuss how we can collaborate to bring your vision to life.
-          </p>
-        </div>
-
-        <div className="grid lg:grid-cols-2 gap-12">
-          {/* Contact Info */}
-          <div className="space-y-8">
-            <div>
-              <h3 className="text-2xl font-semibold text-foreground mb-4">
-                Get In Touch
-              </h3>
-              <p className="text-muted-foreground leading-relaxed">
-                I'm always open to discussing new projects, creative ideas, 
-                or opportunities to be part of your vision. Feel free to reach out!
-              </p>
-            </div>
-
-            <div className="space-y-4">
-              <div className="flex items-center gap-4 p-4 rounded-xl bg-background border border-border">
-                <div className="p-3 rounded-lg bg-primary/10">
-                  <Mail className="w-5 h-5 text-primary" />
-                </div>
-                <div>
-                  <p className="text-sm text-muted-foreground">Email</p>
-                  <p className="text-foreground font-medium">
-                    akiljalotariya34@email.com
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex items-center gap-4 p-4 rounded-xl bg-background border border-border">
-                <div className="p-3 rounded-lg bg-primary/10">
-                  <MapPin className="w-5 h-5 text-primary" />
-                </div>
-                <div>
-                  <p className="text-sm text-muted-foreground">Location</p>
-                  <p className="text-foreground font-medium">India</p>
-                </div>
-              </div>
-
-              <div className="flex items-center gap-4 p-4 rounded-xl bg-background border border-border">
-                <div className="p-3 rounded-lg bg-primary/10">
-                  <Phone className="w-5 h-5 text-primary" />
-                </div>
-                <div>
-                  <p className="text-sm text-muted-foreground">Contact</p>
-                  <p className="text-foreground font-medium">+91 9054593051</p>
-                </div>
-              </div>
-            </div>
+    <>
+      {/* Contact form section */}
+      <section id="contact" className="section-container bg-secondary/30">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="section-title">
+              Let's Work <span className="text-primary">Together</span>
+            </h2>
+            <p className="section-subtitle max-w-2xl mx-auto">
+              Have a project in mind? Let's discuss how we can collaborate to bring your vision to life.
+            </p>
           </div>
 
-          {/* Contact Form */}
-          <form
-            onSubmit={handleSubmit}
-            className="space-y-6 p-8 rounded-2xl bg-background border border-border shadow-card"
-          >
-            <div className="space-y-2">
-              <label htmlFor="name" className="text-sm font-medium text-foreground">
-                Full Name
-              </label>
+          <div className="grid lg:grid-cols-2 gap-12">
+            {/* Contact info */}
+            <div className="space-y-8">
+              <div>
+                <h3 className="text-2xl font-semibold mb-4">Get In Touch</h3>
+                <p className="text-muted-foreground">
+                  I'm always open to discussing new projects, creative ideas, 
+                  or opportunities. Feel free to reach out!
+                </p>
+              </div>
+
+              <div className="space-y-4">
+                <div className="flex items-center gap-4 p-4 rounded-xl bg-background border">
+                  <Mail className="w-5 h-5 text-primary" />
+                  <div>
+                    <p className="text-sm text-muted-foreground">Email</p>
+                    <p className="font-medium">akiljalotariya34@email.com</p>
+                  </div>
+                </div>
+
+                <div className="flex items-center gap-4 p-4 rounded-xl bg-background border">
+                  <MapPin className="w-5 h-5 text-primary" />
+                  <div>
+                    <p className="text-sm text-muted-foreground">Location</p>
+                    <p className="font-medium">India</p>
+                  </div>
+                </div>
+
+                <div className="flex items-center gap-4 p-4 rounded-xl bg-background border">
+                  <Phone className="w-5 h-5 text-primary" />
+                  <div>
+                    <p className="text-sm text-muted-foreground">Contact</p>
+                    <p className="font-medium">+91 9054593051</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Form */}
+            <form onSubmit={handleSubmit} className="space-y-6 p-8 rounded-2xl bg-background border shadow-card">
               <Input
-                id="name"
                 name="name"
                 placeholder="Your name"
                 value={formData.name}
                 onChange={handleChange}
                 required
-                className="bg-secondary/50 border-border focus:border-primary"
               />
-            </div>
 
-            <div className="space-y-2">
-              <label htmlFor="email" className="text-sm font-medium text-foreground">
-                Email Address
-              </label>
               <Input
-                id="email"
                 name="email"
                 type="email"
                 placeholder="your@email.com"
                 value={formData.email}
                 onChange={handleChange}
                 required
-                className="bg-secondary/50 border-border focus:border-primary"
               />
-            </div>
 
-            <div className="space-y-2">
-              <label htmlFor="message" className="text-sm font-medium text-foreground">
-                Your Message
-              </label>
               <Textarea
-                id="message"
                 name="message"
-                placeholder="Tell me about your project..."
                 rows={5}
+                placeholder="Tell me about your project..."
                 value={formData.message}
                 onChange={handleChange}
                 required
-                className="bg-secondary/50 border-border focus:border-primary resize-none"
               />
-            </div>
 
-            <Button
-              type="submit"
-              size="lg"
-              className="w-full"
-              disabled={state.submitting}
-            >
-              {state.submitting ? (
-                "Sending..."
-              ) : (
-                <>
-                  <Send className="mr-2" size={18} />
-                  Send Message
-                </>
-              )}
-            </Button>
-          </form>
+              <Button type="submit" disabled={state.submitting} className="w-full">
+                {state.submitting ? "Sending..." : "Send Message"}
+              </Button>
+            </form>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+
+      {/* Social cards section */}
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-6xl mx-auto px-6">
+          <h2 className="text-3xl font-bold text-center mb-12">Connect With Me</h2>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            <a className="group bg-white rounded-2xl shadow-md p-10 flex flex-col items-center gap-4 hover:shadow-xl transition"
+               href="https://github.com/your-username" target="_blank">
+              <Github className="w-14 h-14 text-gray-500 group-hover:scale-110 transition" />
+              <span className="font-medium">Github</span>
+            </a>
+
+            <a className="group bg-white rounded-2xl shadow-md p-10 flex flex-col items-center gap-4 hover:shadow-xl transition"
+               href="https://linkedin.com/in/your-profile" target="_blank">
+              <Linkedin className="w-14 h-14 text-gray-500 group-hover:scale-110 transition" />
+              <span className="font-medium">LinkedIn</span>
+            </a>
+
+            <a className="group bg-white rounded-2xl shadow-md p-10 flex flex-col items-center gap-4 hover:shadow-xl transition"
+               href="mailto:your@email.com">
+              <Mail className="w-14 h-14 text-gray-500 group-hover:scale-110 transition" />
+              <span className="font-medium">Email</span>
+            </a>
+
+            <a className="group bg-white rounded-2xl shadow-md p-10 flex flex-col items-center gap-4 hover:shadow-xl transition"
+               href="https://wa.me/919999999999" target="_blank">
+              <Phone className="w-14 h-14 text-gray-500 group-hover:scale-110 transition" />
+              <span className="font-medium">WhatsApp</span>
+            </a>
+          </div>
+        </div>
+      </section>
+    </>
   );
 };
 
