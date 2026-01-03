@@ -3,16 +3,32 @@ import { ArrowDown, Download } from "lucide-react";
 import { Button } from "./ui/button";
 
 const HeroSection = () => {
-  // typing text effect
   const [text, setText] = useState("");
   const fullText = "Akil Jalotariya";
 
+  // 🔁 typing + deleting loop
   useEffect(() => {
     let i = 0;
+    let deleting = false;
+
     const typing = setInterval(() => {
-      setText(fullText.slice(0, i));
-      i++;
-      if (i > fullText.length) clearInterval(typing);
+      if (!deleting) {
+        setText(fullText.slice(0, i));
+        i++;
+
+        if (i > fullText.length) {
+          deleting = true;
+          i = fullText.length;
+        }
+      } else {
+        setText(fullText.slice(0, i));
+        i--;
+
+        if (i < 0) {
+          deleting = false;
+          i = 0;
+        }
+      }
     }, 120);
 
     return () => clearInterval(typing);
@@ -25,19 +41,19 @@ const HeroSection = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 justify-center gap-10">
 
-            {/* LEFT — TEXT CONTENT */}
+            {/* LEFT — TEXT */}
             <div className="max-w-3xl">
               <p className="text-muted-foreground text-lg mb-2">Hello</p>
 
-              {/* Auto typing name */}
               <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 tracking-tight text-foreground">
                 Hi, I'm{" "}
                 <span className="text-primary inline-block min-w-[220px]">
                   {text}
-                  <span className="border-r-2 border-primary ml-1 animate-pulse">&nbsp;</span>
+                  <span className="border-r-2 border-primary ml-1 animate-pulse">
+                    &nbsp;
+                  </span>
                 </span>
               </h1>
-
 
               {/* Code Card */}
               <div className="mb-8 rounded-xl overflow-hidden shadow-card max-w-lg border border-border">
@@ -78,12 +94,12 @@ const HeroSection = () => {
               </div>
             </div>
 
-            {/* RIGHT — ROUND IMAGE */}
-            <div className="flex justify-center md:justify-end w-100 h-100 sm:w-90 sm:h-90">
+            {/* RIGHT — IMAGE */}
+            <div className="flex justify-center md:justify-end">
               <img
                 src="https://images.unsplash.com/photo-1534665482403-a909d0d97c67?w=600&auto=format&fit=crop&q=60"
                 alt="Profile"
-                className="w-100 h-64 sm:w-80 sm:h-80 rounded-full object-cover shadow-2xl border-4 border-white/20"
+                className="w-64 h-64 sm:w-80 sm:h-80 rounded-full object-cover shadow-2xl border-4 border-white/20"
               />
             </div>
 
