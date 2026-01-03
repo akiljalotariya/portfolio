@@ -47,13 +47,14 @@ const HeroSection = () => {
 
               <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 tracking-tight text-foreground">
                 Hi, I'm{" "}
-                <span className="text-primary inline-block min-w-[220px]">
+                <span className="text-primary inline-flex items-center min-w-[240px] h-[1.2em]">
                   {text}
-                  <span className="border-r-2 border-primary ml-1 animate-pulse">
+                  <span className="border-r-2 border-primary ml-1 animate-pulse h-full">
                     &nbsp;
                   </span>
                 </span>
               </h1>
+
 
               {/* Code Card */}
               <div className="mb-8 rounded-xl overflow-hidden shadow-card max-w-lg border border-border">
