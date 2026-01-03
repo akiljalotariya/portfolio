@@ -21,10 +21,10 @@ const projects = [
   {
     title: "Portfolio Website",
     description: "A modern, responsive portfolio website showcasing projects and skills.",
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop",
+    image: "https://github.com/akiljalotariya/portfolio",
     tags: ["React", "Tailwind CSS", "Framer Motion"],
     demoLink: "#",
-    githubLink: "#",
+    githubLink: "https://github.com/akiljalotariya/portfolio",
   },
 ];
 
