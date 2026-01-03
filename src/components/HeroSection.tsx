@@ -42,10 +42,10 @@ const HeroSection = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 justify-center gap-10">
 
             {/* LEFT — TEXT */}
-            <div className="max-w-4xl">
+            <div className="max-w-3xl">
               <p className="text-muted-foreground text-lg mb-2">Hello</p>
 
-              <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 tracking-tight text-foreground">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 tracking-tight text-foreground">
                 Hi, I'm{" "}
                 <span className="text-primary inline-flex items-center min-w-[240px] h-[1.2em]">
                   {text}
@@ -54,6 +54,7 @@ const HeroSection = () => {
                   </span>
                 </span>
               </h1>
+
 
 
               {/* Code Card */}
