@@ -1,35 +1,23 @@
+import { useState, useEffect } from "react";
 import { ArrowDown, Download } from "lucide-react";
 import { Button } from "./ui/button";
-// tailwind.config.js
-module.exports = {
-  theme: {
-    extend: {
-      keyframes: {
-        typing: {
-          "0%": {
-            width: "0%",
-            visibility: "hidden"
-          },
-          "100%": {
-            width: "100%"
-          }
-        },
-        blink: {
-          "50%": {
-            borderColor: "transparent"
-          },
-          "100%": {
-            borderColor: "white"
-          }
-        }
-      },
-      animation: {
-        typing: "typing 2s steps(16) 1s 1 normal both, blink 1s steps(1) infinite"
-      }
-    }
-  }
-}
+
 const HeroSection = () => {
+  // typing text effect
+  const [text, setText] = useState("");
+  const fullText = "Akil Jalotariya";
+
+  useEffect(() => {
+    let i = 0;
+    const typing = setInterval(() => {
+      setText(fullText.slice(0, i));
+      i++;
+      if (i > fullText.length) clearInterval(typing);
+    }, 120);
+
+    return () => clearInterval(typing);
+  }, []);
+
   return (
     <>
       <section className="relative min-h-screen flex items-center bg-gradient-hero pt-20">
@@ -41,8 +29,15 @@ const HeroSection = () => {
             <div className="max-w-3xl">
               <p className="text-muted-foreground text-lg mb-2">Hello</p>
 
+              {/* Auto typing name */}
               <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 tracking-tight text-foreground">
-                Hi, I'm <span className="text-primary">Akil Jalotariya</span>
+                Hi, I'm{" "}
+                <span className="text-primary">
+                  {text}
+                  <span className="border-r-2 border-primary ml-1 animate-pulse">
+                    &nbsp;
+                  </span>
+                </span>
               </h1>
 
               {/* Code Card */}
@@ -81,14 +76,13 @@ const HeroSection = () => {
                     Download CV
                   </Button>
                 </a>
-
               </div>
             </div>
 
             {/* RIGHT — ROUND IMAGE */}
             <div className="flex justify-center md:justify-end w-100 h-100 sm:w-90 sm:h-90">
               <img
-                src="https://images.unsplash.com/photo-1534665482403-a909d0d97c67?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bWFuJTIwY29kaW5nfGVufDB8fDB8fHww"
+                src="https://images.unsplash.com/photo-1534665482403-a909d0d97c67?w=600&auto=format&fit=crop&q=60"
                 alt="Profile"
                 className="w-100 h-64 sm:w-80 sm:h-80 rounded-full object-cover shadow-2xl border-4 border-white/20"
               />
@@ -97,8 +91,6 @@ const HeroSection = () => {
           </div>
         </div>
       </section>
-
-
     </>
   );
 };
