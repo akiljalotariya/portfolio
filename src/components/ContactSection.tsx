@@ -29,6 +29,40 @@ const ContactSection = () => {
 
   return (
     <>
+
+    {/* Social cards section */}
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-6xl mx-auto px-6">
+          <h2 className="text-3xl font-bold text-center mb-12">Connect With Me</h2>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            <a className="group bg-white rounded-2xl shadow-md p-10 flex flex-col items-center gap-4 hover:shadow-xl transition"
+               href="https://github.com/akiljalotariya/portfolio" target="_blank">
+              <Github className="w-14 h-14 text-gray-500 group-hover:scale-110 transition" />
+              <span className="font-medium">Github</span>
+            </a>
+
+            <a className="group bg-white rounded-2xl shadow-md p-10 flex flex-col items-center gap-4 hover:shadow-xl transition"
+               href="https://www.linkedin.com/in/akil-jalotariya-157a042b3/" target="_blank">
+              <Linkedin className="w-14 h-14 text-gray-500 group-hover:scale-110 transition" />
+              <span className="font-medium">LinkedIn</span>
+            </a>
+
+            <a className="group bg-white rounded-2xl shadow-md p-10 flex flex-col items-center gap-4 hover:shadow-xl transition"
+               href="mailto:your@email.com">
+              <Mail className="w-14 h-14 text-gray-500 group-hover:scale-110 transition" />
+              <span className="font-medium">Email</span>
+            </a>
+
+            <a className="group bg-white rounded-2xl shadow-md p-10 flex flex-col items-center gap-4 hover:shadow-xl transition"
+               href="https://wa.me/919054593051" target="_blank">
+              <Phone className="w-14 h-14 text-gray-500 group-hover:scale-110 transition" />
+              <span className="font-medium">WhatsApp</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* Contact form section */}
       <section id="contact" className="section-container bg-secondary/30">
         <div className="max-w-6xl mx-auto">
@@ -115,38 +149,7 @@ const ContactSection = () => {
         </div>
       </section>
 
-      {/* Social cards section */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-6xl mx-auto px-6">
-          <h2 className="text-3xl font-bold text-center mb-12">Connect With Me</h2>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            <a className="group bg-white rounded-2xl shadow-md p-10 flex flex-col items-center gap-4 hover:shadow-xl transition"
-               href="https://github.com/your-username" target="_blank">
-              <Github className="w-14 h-14 text-gray-500 group-hover:scale-110 transition" />
-              <span className="font-medium">Github</span>
-            </a>
-
-            <a className="group bg-white rounded-2xl shadow-md p-10 flex flex-col items-center gap-4 hover:shadow-xl transition"
-               href="https://linkedin.com/in/your-profile" target="_blank">
-              <Linkedin className="w-14 h-14 text-gray-500 group-hover:scale-110 transition" />
-              <span className="font-medium">LinkedIn</span>
-            </a>
-
-            <a className="group bg-white rounded-2xl shadow-md p-10 flex flex-col items-center gap-4 hover:shadow-xl transition"
-               href="mailto:your@email.com">
-              <Mail className="w-14 h-14 text-gray-500 group-hover:scale-110 transition" />
-              <span className="font-medium">Email</span>
-            </a>
-
-            <a className="group bg-white rounded-2xl shadow-md p-10 flex flex-col items-center gap-4 hover:shadow-xl transition"
-               href="https://wa.me/919999999999" target="_blank">
-              <Phone className="w-14 h-14 text-gray-500 group-hover:scale-110 transition" />
-              <span className="font-medium">WhatsApp</span>
-            </a>
-          </div>
-        </div>
-      </section>
+      
     </>
   );
 };
