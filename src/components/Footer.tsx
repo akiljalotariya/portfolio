@@ -12,7 +12,7 @@ const socialLinks = [
   { name: "GitHub", icon: Github, href: "https://github.com/akiljalotariya" },
   { name: "LinkedIn", icon: Linkedin, href: "https://www.linkedin.com/in/akil-jalotariya-157a042b3/" },
   // { name: "Twitter", icon: Twitter, href: "https://twitter.com" },
-  { name: "Email", icon: Mail, href: "akiljalotariya34@email.com" },
+  { name: "Email", icon: Mail, href: "akiljalotariya34@gmail.com" },
 ];
 
 const Footer = () => {
