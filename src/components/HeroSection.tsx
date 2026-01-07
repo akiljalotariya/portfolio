@@ -9,9 +9,9 @@ const HeroSection = () => {
           {/* Text Content */}
           <div className="stagger-children">
             {/* Greeting */}
-            <p className="text-muted-foreground text-lg mb-2"> Hello!</p>
+            <p className="text-muted-foreground text-lg mb-2"> Hello</p>
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 tracking-tight text-foreground">
-              Hi, I'm <span className="text-primary">Jalotariya Akil</span>
+              Hi, I'm <span className="text-primary"> Akil Jalotariya </span>
             </h1>
 
             {/* Code Block */}
