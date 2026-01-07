@@ -146,7 +146,7 @@ const ContactSection = () => {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             <a
-              href="https://github.com/your-username"
+              href="https://github.com/akiljalotariya"
               target="_blank"
               rel="noopener noreferrer"
               className="group bg-white rounded-2xl shadow-md p-10 flex flex-col items-center gap-4 hover:shadow-xl transition"
@@ -156,7 +156,7 @@ const ContactSection = () => {
             </a>
 
             <a
-              href="https://linkedin.com/in/your-profile"
+              href="https://www.linkedin.com/in/akil-jalotariya-157a042b3/"
               target="_blank"
               rel="noopener noreferrer"
               className="group bg-white rounded-2xl shadow-md p-10 flex flex-col items-center gap-4 hover:shadow-xl transition"
