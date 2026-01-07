@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { ArrowDown, Download } from "lucide-react";
 import { Button } from "./ui/button";
+import hero from "../../public/Hero-img.avif";
 
 const HeroSection = () => {
   const [text, setText] = useState("");
@@ -100,7 +101,7 @@ const HeroSection = () => {
             {/* RIGHT — IMAGE */}
             <div className="flex justify-center md:justify-end w-[90%]">
               <img
-                src="https://images.unsplash.com/photo-1534665482403-a909d0d97c67?w=600&auto=format&fit=crop&q=60"
+                src={hero}
                 alt="Profile"
                 className="w-64 h-64 sm:w-80 sm:h-80 rounded-full object-cover shadow-2xl border-4 border-white/20"
               />
