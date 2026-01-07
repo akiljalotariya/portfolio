@@ -25,12 +25,12 @@ const services = [
     description: "Ensuring websites look and work perfectly on all devices and screen sizes.",
     tags: ["Responsive", "Mobile-First"],
   },
-  {
-    icon: Database,
-    title: "UI/UX Design",
-    description: "Designing intuitive and visually appealing user experiences with attention to detail.",
-    tags: ["Figma", "UI Design"],
-  },
+  // {
+  //   icon: Database,
+  //   title: "UI/UX Design",
+  //   description: "Designing intuitive and visually appealing user experiences with attention to detail.",
+  //   tags: ["Figma", "UI Design"],
+  // },
   {
     icon: Wrench,
     title: "Website Maintenance",

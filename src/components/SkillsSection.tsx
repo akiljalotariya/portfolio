@@ -1,15 +1,16 @@
 const frontendSkills = [
   { name: "HTML/CSS", level: 90 },
-  { name: "JavaScript", level: 85 },
-  { name: "React.js", level: 80 },
-  { name: "Tailwind CSS", level: 85 },
+  { name: "JavaScript", level: 50 },
+  { name: "React.js", level: 90 },
+  { name: "Tailwind CSS", level: 97 },
 ];
 
 const backendSkills = [
   { name: "Node.js", level: 75 },
   { name: "Express.js", level: 80 },
-  { name: "MongoDB", level: 70 },
-  { name: "REST APIs", level: 75 },
+  { name: "MY SQL", level: 90 },
+  { name: "MongoDB", level: 30 },
+  // { name: "REST APIs", level: 75 },
 ];
 
 const tools = [

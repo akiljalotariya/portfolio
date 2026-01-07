@@ -2,29 +2,29 @@ import { ExternalLink, Github } from "lucide-react";
 import { Button } from "./ui/button";
 
 const projects = [
-  {
-    title: "E-commerce Store",
-    description: "A full-stack e-commerce application with user authentication, shopping cart, and payment integration.",
-    image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop",
-    tags: ["React", "Node.js", "MongoDB", "Stripe"],
-    demoLink: "#",
-    githubLink: "#",
-  },
-  {
-    title: "Task Manager App",
-    description: "A collaborative task management tool with real-time updates and team features.",
-    image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=600&h=400&fit=crop",
-    tags: ["MERN Stack", "Socket.io", "JWT"],
-    demoLink: "#",
-    githubLink: "#",
-  },
+  // {
+  //   title: "E-commerce Store",
+  //   description: "A full-stack e-commerce application with user authentication, shopping cart, and payment integration.",
+  //   image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop",
+  //   tags: ["React", "Node.js", "MongoDB", "Stripe"],
+  //   demoLink: "#",
+  //   githubLink: "#",
+  // },
+  // {
+  //   title: "Task Manager App",
+  //   description: "A collaborative task management tool with real-time updates and team features.",
+  //   image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=600&h=400&fit=crop",
+  //   tags: ["MERN Stack", "Socket.io", "JWT"],
+  //   demoLink: "#",
+  //   githubLink: "#",
+  // },
   {
     title: "Portfolio Website",
     description: "A modern, responsive portfolio website showcasing projects and skills.",
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop",
+    image: "https://github.com/akiljalotariya/portfolio",
     tags: ["React", "Tailwind CSS", "Framer Motion"],
     demoLink: "#",
-    githubLink: "#",
+    githubLink: "https://github.com/akiljalotariya/portfolio",
   },
 ];
 
