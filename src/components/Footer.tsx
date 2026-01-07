@@ -9,10 +9,10 @@ const quickLinks = [
 ];
 
 const socialLinks = [
-  { name: "GitHub", icon: Github, href: "https://github.com" },
-  { name: "LinkedIn", icon: Linkedin, href: "https://linkedin.com" },
-  { name: "Twitter", icon: Twitter, href: "https://twitter.com" },
-  { name: "Email", icon: Mail, href: "mailto:akil.jalotariya@email.com" },
+  { name: "GitHub", icon: Github, href: "https://github.com/akiljalotariya" },
+  { name: "LinkedIn", icon: Linkedin, href: "https://www.linkedin.com/in/akil-jalotariya-157a042b3/" },
+  // { name: "Twitter", icon: Twitter, href: "https://twitter.com" },
+  { name: "Email", icon: Mail, href: "akiljalotariya34@email.com" },
 ];
 
 const Footer = () => {
