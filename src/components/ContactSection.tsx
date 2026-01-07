@@ -166,7 +166,7 @@ const ContactSection = () => {
             </a>
 
             <a
-              href="mailto:akiljalotariya34@email.com"
+              href="akiljalotariya34@gmail.com"
               className="group bg-white rounded-2xl shadow-md p-10 flex flex-col items-center gap-4 hover:shadow-xl transition"
             >
               <Mail className="w-14 h-14 text-gray-500 group-hover:scale-110 transition" />
