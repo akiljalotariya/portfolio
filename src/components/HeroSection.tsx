@@ -42,7 +42,7 @@ const HeroSection = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 justify-center gap-10 items-center">
             {/* LEFT — TEXT */}
             <div className="max-w-3xl">
-              <p className="text-muted-foreground text-lg mb-2">Hello</p>
+              {/* <p className="text-muted-foreground text-lg mb-2">Hello</p> */}
 
               <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 tracking-tight text-foreground">
                 Hi, I'm{" "}
