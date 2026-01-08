@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "./ui/button";
-
+import navlogo from "../../public/logo-Navbar.png";
 const navLinks = [
   { name: "Home", href: "#" },
   { name: "About", href: "#about" },
@@ -25,15 +25,19 @@ const Navbar = () => {
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? "bg-background/95 backdrop-blur-md shadow-soft py-3" : "bg-transparent py-5"
+        isScrolled
+          ? "bg-background/95 backdrop-blur-md shadow-soft py-3"
+          : "bg-transparent py-5"
       }`}
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <a href="#" className="flex items-center justify-center w-10 h-10 rounded-full bg-primary text-primary-foreground font-bold text-lg">
-            JA
-          </a>
+          <img
+            src={navlogo}
+            alt="Navbar Logo"
+            className="w-100 h-20  "
+          />
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
